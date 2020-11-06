@@ -3,8 +3,8 @@ const json = require('body-parser').json()
 
 const Pets = require('./pets.service')
 const People = require('../people/people.service')
-const STORE = require('../../store')
 const Queue = require('../queue/Queue')
+
 
 const router = express.Router()
 
@@ -15,7 +15,10 @@ router.get('/', (req, res) => {
 })
 
 router.delete('/', json, (req, res) => {
-   
+  //adopted.enqueue(dogs.dequeue());
+   People.dequeue()
+   Pets.dequeue( req.body.type )
+   res.status(204).end()
 })
 
 module.exports = router

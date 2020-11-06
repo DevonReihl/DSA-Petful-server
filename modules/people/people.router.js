@@ -13,6 +13,7 @@ router.post('/', json, (req, res) => {
   
   const newPerson = req.body.name
   People.enqueue(newPerson)
+  res.status(201).json(People.enqueue)
 })
 
 module.exports = router

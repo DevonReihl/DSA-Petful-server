@@ -1,12 +1,16 @@
 const Queue = require('../queue/Queue')
 const store = require('../../store')
+const { people } = require('../../store')
 
 // Set up initial data.
 // --------------------
 
 const pets = {
   cats: new Queue(),
-  dogs: new Queue()
+  dogs: new Queue(),
+  dequeue: function(type){
+    return this[type].dequeue()
+  }
 }
 
 store.cats.forEach(cat => pets.cats.enqueue(cat))
@@ -25,6 +29,8 @@ module.exports = {
   },
 
   dequeue(type) {
-    // Remove a pet from the queue.
+
+    pets.dequeue(type)
+
   }
 }

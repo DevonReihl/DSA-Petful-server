@@ -19,6 +19,6 @@ module.exports = {
   },
 
   dequeue() {
-    people.dequeue(person)
+    people.dequeue()
   }
 }
