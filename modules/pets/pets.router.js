@@ -3,8 +3,6 @@ const json = require('body-parser').json()
 
 const Pets = require('./pets.service')
 const People = require('../people/people.service')
-const Queue = require('../queue/Queue')
-
 
 const router = express.Router()
 
