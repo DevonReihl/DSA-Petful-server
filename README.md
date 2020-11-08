@@ -1,9 +1,12 @@
 # Petful Server
-Live: //add live link once deployed
-Client Repo: https://github.com/DevonReihl/DSA-petful-client
+#Live: https://petful-client-hjumdgxw3.vercel.app
+
+#Client Repo: https://github.com/DevonReihl/DSA-petful-client
 
 The Petful application resembles an adoption process for cats and dogs. Only you can only adopt the current available cat or dog on as FIFO bases. Along with the animal you are removed from the queue
+
 Technologies: React, Express, Node
+
 Endpoints
 GET (/pets): Retrieve cats or dogs in a Queue structure
 
